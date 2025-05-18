@@ -1,0 +1,18 @@
+cookie:
+  expiry_days: 100
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    A12345:
+      email: johndoe@example.com
+      name: JohnDoe
+      password: $2b$12$UMnpx3tTiueZSsfQGUrqOenO/4tffKoKou74kiuIxtkbLgjlgDyz.
+    B23456:
+      email: alice.smith@example.com
+      name: AliceSmith
+      password: $2b$12$fnGs/3y1vhJTxtteLhVIUOTTB5rBRQXZR7YKXNY1tvPcUjcO/MV1e
+    C34567:
+      email: bobj@example.com
+      name: BobJohnson
+      password: $2b$12$PdNQi.vGhKlyCxJuSQGppOMTrjJd8t3wZl4YvLJm6A7YvUvExGy3u
