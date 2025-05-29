@@ -7,12 +7,15 @@ credentials:
     A12345:
       email: johndoe@example.com
       name: JohnDoe
-      password: $2b$12$UMnpx3tTiueZSsfQGUrqOenO/4tffKoKou74kiuIxtkbLgjlgDyz.
+      password: $2b$12$5CQDrftTR9oiZQKTbEgrUeOVQqmzmTJJrQriHz7kJ1f6RGbnLVuKS
+      role: Admin
     B23456:
       email: alice.smith@example.com
       name: AliceSmith
-      password: $2b$12$fnGs/3y1vhJTxtteLhVIUOTTB5rBRQXZR7YKXNY1tvPcUjcO/MV1e
+      password: $2b$12$p7khtR0SD0CJ6LbRVRnkLuDG40vBS/zqzMxDF0qLM.bjNsy4ETqYO
+      role: User
     C34567:
       email: bobj@example.com
       name: BobJohnson
-      password: $2b$12$PdNQi.vGhKlyCxJuSQGppOMTrjJd8t3wZl4YvLJm6A7YvUvExGy3u
+      password: $2b$12$JO8aLSGFF3Lp.p82X8qNL.bjAUfjG/O6bVuGor6jKPTVNMppzU5LW
+      role: User

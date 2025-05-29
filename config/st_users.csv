@@ -1,4 +1,4 @@
-id,name,password,email
-A12345,JohnDoe,johndoepass,johndoe@example.com
-B23456,AliceSmith,alicepass,alice.smith@example.com
-C34567,BobJohnson,bobjohnsonpass,bobj@example.com
+id,name,password,email,role
+A12345,JohnDoe,johndoepass,johndoe@example.com,Admin
+B23456,AliceSmith,alicepass,alice.smith@example.com,User
+C34567,BobJohnson,bobjohnsonpass,bobj@example.com,User

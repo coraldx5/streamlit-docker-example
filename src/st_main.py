@@ -34,10 +34,6 @@ def main():
         page="page_contents/page_admin.py", title="管理者画面", icon=":material/open_with:"
     )
 
-    # トグルスイッチ
-    is_admin = st.sidebar.toggle("管理者メニューを表示", value=False)
-    st.session_state.role = "Admin" if is_admin else "User"
-
     # ナビゲーションの設定
     nav_dict = {"Menu": [top_page]}
     if st.session_state.role == "Admin":
@@ -48,7 +44,7 @@ def main():
 
 def run_authenticator():
     with open("./config/st_config.yml") as file:
-        config = yaml.load(file, Loader=SafeLoader)
+        config = yaml.safe_load(file)
 
     authenticator = stauth.Authenticate(
         credentials=config["credentials"],
@@ -63,12 +59,16 @@ def run_authenticator():
 
     status = st.session_state.get("authentication_status")
     if status:
+        user_info = config["credentials"]["usernames"].get(st.session_state['username'])
+        if user_info:
+            st.session_state.role = user_info.get("role")
+        # ログアウトボタンの追加
+        authenticator.logout("ログアウト", "main")
         main()
     elif status is False:
         st.error("Username/password is incorrect")
     elif status is None:
         st.warning("Please enter your username and password")
-
 
 if __name__ == "__main__":
     run_authenticator()

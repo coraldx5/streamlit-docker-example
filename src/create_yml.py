@@ -40,6 +40,7 @@ def hash_users(users):
             "name": user["name"],
             "password": user["password"],
             "email": user["email"],
+            "role": user["role"] if "role" in user else None,
         }
     return users_dict
 
